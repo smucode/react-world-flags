@@ -1,0 +1,55 @@
+{
+  "name": "react-world-flags",
+  "version": "0.0.1",
+  "description": "SVG flags of the world for react",
+  "main": "dist/react-world-flags.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack",
+    "lint": "eslint src/ test/",
+    "gen": "babel-node scripts/genFlagExports.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smucode/react-world-flags.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "world",
+    "flag",
+    "flags",
+    "svg"
+  ],
+  "author": "SMU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smucode/react-world-flags/issues"
+  },
+  "homepage": "https://github.com/smucode/react-world-flags#readme",
+  "dependencies": {
+    "svg-country-flags": "^1.0.0",
+    "world-countries": "^1.8.1"
+  },
+  "peerDependencies": {
+    "react": "^0.14"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.2",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-cleanjs": "^4.0.0",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.10.3",
+    "react": "^0.14",
+    "svg-url-loader": "^2.0.2",
+    "webpack": "^2.3.3"
+  }
+}
