@@ -1,6 +1,6 @@
 {
   "name": "react-world-flags",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SVG flags of the world for react",
   "main": "dist/react-world-flags.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "world-countries": "^1.8.1"
   },
   "peerDependencies": {
-    "react": "^0.14"
+    "react": "^15.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
