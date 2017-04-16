@@ -1,6 +1,8 @@
 # react-world-flags
 Easy to use SVG flags of the world for react
 
+[Demo](https://smucode.github.io/react-world-flags/)
+
 ## Installation
 
 ```
