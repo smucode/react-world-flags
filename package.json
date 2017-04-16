@@ -8,7 +8,7 @@
     "build": "webpack",
     "lint": "eslint src/",
     "gen": "babel-node scripts/genFlagExports.js",
-    "build-demo": "webpack --config demo/webpack.config.js",
+    "build-demo": "webpack --config docs/webpack.config.js",
     "publish": "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
   },
   "jest": {
