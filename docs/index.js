@@ -14,14 +14,14 @@ import Flag from '../src/Flag'
 class Flags extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { height: 25 }
+    this.state = { height: 50 }
   }
   render() {
     const flags = Object.keys(countries).map(c => (
       <Flag
         key={ c }
         code={ c }
-        style={{ padding: 10 }}
+        style={{ margin: 10, boxShadow: '2px 2px 7px #ccc' }}
         height={ this.state.height }
       />
     ))
@@ -47,7 +47,8 @@ class Flags extends React.Component {
 const app = (
   <div>
     <h1>react-world-flags</h1>
-    <a href="https://github.com/smucode/react-world-flags">github</a>
+    <p>SVG flags of the world for react</p>
+    <a href="https://github.com/smucode/react-world-flags">Docs</a>
     <Flags/>
   </div>
 )

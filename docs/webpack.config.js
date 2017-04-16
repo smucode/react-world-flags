@@ -4,7 +4,7 @@ module.exports = {
   entry: './docs/index.js',
   output: {
     filename: 'build.js',
-    path: path.resolve(__dirname, './docs'),
+    path: path.resolve(__dirname, './'),
   },
   module: {
     loaders: [
