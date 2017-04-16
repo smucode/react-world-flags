@@ -21,6 +21,8 @@ class Flags extends React.Component {
       <Flag
         key={ c }
         code={ c }
+        alt={ countries[c] }
+        title={ countries[c] }
         style={{ margin: 10, boxShadow: '2px 2px 7px #ccc' }}
         height={ this.state.height }
       />
