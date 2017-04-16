@@ -11,7 +11,7 @@ npm install react-world-flags
 
 ## Usage
 
-```
+```javascript
 import Flag from 'react-world-flags'
 
 <Flag code={ code } />
@@ -21,8 +21,10 @@ Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-
 
 All props but `code` are passed through to the rendered `img`
 
-```
+```javascript
 <Flag code="nor" height="16" />
+
+// <img src="data:image/svg+xml..." height="16">
 ```
 
 ## Caveat
