@@ -1,9 +1,11 @@
 # react-world-flags
-SVG flags of the world for react
+Easy to use SVG flags of the world for react
 
 ## Installation
 
-`npm install react-world-flags`
+```
+npm install react-world-flags
+```
 
 ## Usage
 
@@ -14,6 +16,12 @@ import Flag from 'react-world-flags'
 ```
 
 Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), [three letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or [three digit](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) country code.
+
+All props but `code` are passed through to the rendered `img`
+
+```
+<Flag code="nor" height="16" />
+```
 
 ## Caveat
 
