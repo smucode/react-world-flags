@@ -8,7 +8,8 @@
     "build": "webpack",
     "lint": "eslint src/",
     "gen": "babel-node scripts/genFlagExports.js",
-    "publish": "npm run gen && npm run lint && npm run test && npm run build"
+    "build-demo": "webpack --config demo/webpack.config.js",
+    "publish": "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
   },
   "jest": {
     "moduleNameMapper": {
@@ -38,7 +39,7 @@
     "world-countries": "^1.8.1"
   },
   "peerDependencies": {
-    "react": "^15.0.0"
+    "react": ">=0.14"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -55,7 +56,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.10.3",
     "jest": "^19.0.2",
-    "react": "^15.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-test-renderer": "^15.5.4",
     "svg-url-loader": "^2.0.2",
     "webpack": "^2.3.3"
