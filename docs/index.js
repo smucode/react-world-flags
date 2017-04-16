@@ -26,7 +26,7 @@ class Flags extends React.Component {
       />
     ))
     return (
-      <div>
+      <div style={{ paddingTop: 10 }}>
         <div>
           <input
             min="1"
@@ -47,7 +47,7 @@ class Flags extends React.Component {
 const app = (
   <div>
     <h1>react-world-flags</h1>
-    <a href="https://github.com/smucode/react-world-flags">https://github.com/smucode/react-world-flags</a>
+    <a href="https://github.com/smucode/react-world-flags">github</a>
     <Flags/>
   </div>
 )
