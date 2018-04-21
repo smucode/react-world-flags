@@ -1,25 +1,26 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './docs/index.js',
+  entry: "./docs/index.js",
   output: {
-    filename: 'build.js',
-    path: path.resolve(__dirname, './'),
+    filename: "build.js",
+    path: path.resolve(__dirname, "./")
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js)$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react']
+          presets: ["es2015", "react"]
         }
-      }, {
+      },
+      {
         test: /\.(svg)$/,
-        loader: 'svg-url-loader',
+        loader: "svg-url-loader",
         options: { noquotes: true }
       }
     ]
-  },
+  }
 };
