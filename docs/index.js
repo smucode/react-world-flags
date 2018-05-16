@@ -9,7 +9,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import countries from "svg-country-flags/countries.json";
 
-import Flag from "../src/Flag";
+import Flag from "../dist/react-world-flags";
 
 class Flags extends React.Component {
   constructor(props) {

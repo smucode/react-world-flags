@@ -6,7 +6,8 @@ module.exports = {
     libraryTarget: "umd",
     library: "react-world-flags",
     filename: "react-world-flags.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    globalObject: "this"
   },
   externals: {
     react: "umd react",

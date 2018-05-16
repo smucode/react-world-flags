@@ -1,6 +1,6 @@
 {
   "name": "react-world-flags",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SVG flags of the world for react",
   "main": "dist/react-world-flags.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "lint": "eslint src/",
     "gen": "babel-node scripts/genFlagExports.js",
     "build-demo": "webpack --config docs/webpack.config.js",
-    "pre-publish": "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
+    "pre-publish":
+      "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
   },
   "jest": {
     "moduleNameMapper": {
@@ -20,14 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/smucode/react-world-flags.git"
   },
-  "keywords": [
-    "react",
-    "reactjs",
-    "world",
-    "flag",
-    "flags",
-    "svg"
-  ],
+  "keywords": ["react", "reactjs", "world", "flag", "flags", "svg"],
   "author": "SMU",
   "license": "ISC",
   "bugs": {
