@@ -1,17 +1,8 @@
 {
   "name": "react-world-flags",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "SVG flags of the world for react",
   "main": "dist/react-world-flags.js",
-  "scripts": {
-    "test": "jest",
-    "build": "webpack",
-    "lint": "eslint src/",
-    "gen": "babel-node scripts/genFlagExports.js",
-    "build-demo": "webpack --config docs/webpack.config.js",
-    "pre-publish":
-      "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
-  },
   "jest": {
     "moduleNameMapper": {
       "\\.(svg)$": "<rootDir>/src/__mocks__/fileMock.js"
@@ -56,5 +47,14 @@
     "svg-url-loader": "^2.3.2",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "lint": "eslint src/",
+    "gen": "babel-node scripts/genFlagExports.js",
+    "build-demo": "webpack --config demo/webpack.config.js",
+    "pre-publish":
+      "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
   }
 }

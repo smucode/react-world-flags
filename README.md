@@ -1,4 +1,5 @@
 # react-world-flags
+
 Easy to use SVG flags of the world for react
 
 [Demo](https://smucode.github.io/react-world-flags/)
@@ -19,7 +20,15 @@ import Flag from 'react-world-flags'
 
 Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), [three letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or [three digit](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) country code.
 
-All props but `code` are passed through to the rendered `img`
+You can also pass an optional `fallback` which renders if the given country code you are trying to render doesn't exist:
+
+```javascript
+import Flag from 'react-world-flags'
+
+<Flag code="foo" fallback={ <span>Unknown</span> }/>
+```
+
+All props but `code` and `fallback` are passed through to the rendered `img`
 
 ```javascript
 <Flag code="nor" height="16" />

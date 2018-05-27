@@ -7,9 +7,21 @@ import renderer from 'react-test-renderer'
 
 import Flag from './Flag'
 
-it('renders correctly', () => {
-  const flag = renderer.create(
-    <Flag code="no" height="42" />
-  ).toJSON();
-  expect(flag).toMatchSnapshot();
-});
+it('renders the norwegian flag correctly', () => {
+  const flag = renderer.create(<Flag code="no" height="42" />).toJSON()
+  expect(flag).toMatchSnapshot()
+})
+
+it('renders a fallback flag correctly', () => {
+  const flag = renderer
+    .create(
+      <Flag code="xxx" height="42" fallback={<span>Does not exist.</span>} />
+    )
+    .toJSON()
+  expect(flag).toMatchSnapshot()
+})
+
+it('renders nothing if code does not exist', () => {
+  const flag = renderer.create(<Flag code="xxx" height="42" />).toJSON()
+  expect(flag).toMatchSnapshot()
+})

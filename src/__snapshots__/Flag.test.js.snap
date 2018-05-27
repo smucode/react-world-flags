@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders a fallback flag correctly 1`] = `
+<span>
+  Does not exist.
+</span>
+`;
+
+exports[`renders nothing if code does not exist 1`] = `null`;
+
+exports[`renders the norwegian flag correctly 1`] = `
 <img
   height="42"
   src="test-file-stub"
