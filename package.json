@@ -12,7 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/smucode/react-world-flags.git"
   },
-  "keywords": ["react", "reactjs", "world", "flag", "flags", "svg"],
+  "keywords": [
+    "react",
+    "reactjs",
+    "world",
+    "flag",
+    "flags",
+    "svg"
+  ],
   "author": "SMU",
   "license": "MIT",
   "bugs": {
@@ -54,7 +61,6 @@
     "lint": "eslint src/",
     "gen": "babel-node scripts/genFlagExports.js",
     "build-demo": "webpack --config docs/webpack.config.js",
-    "pre-publish":
-      "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
+    "pre-publish": "npm run gen && npm run lint && npm run test && npm run build && npm run build-demo"
   }
 }
