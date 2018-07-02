@@ -1,6 +1,6 @@
 {
   "name": "react-world-flags",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "SVG flags of the world for react",
   "main": "dist/react-world-flags.js",
   "jest": {
