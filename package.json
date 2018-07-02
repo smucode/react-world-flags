@@ -14,7 +14,7 @@
   },
   "keywords": ["react", "reactjs", "world", "flag", "flags", "svg"],
   "author": "SMU",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/smucode/react-world-flags/issues"
   },
