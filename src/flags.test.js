@@ -8,4 +8,7 @@ describe('flags', () => {
   it('exports the norwegian flag', () => {
     expect(flags.flag_NO).toBeDefined()
   })
+  it('exports the EU flag', () => {
+    expect(flags.flag_EU).toBeDefined()
+  })
 })
