@@ -20,7 +20,7 @@ import Flag from 'react-world-flags'
 
 Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), [three letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or [three digit](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) country code.
 
-You can also pass an optional `fallback` which renders if the given country code you are trying to render doesn't exist:
+You can also pass an optional `fallback` which renders if the given code doesn't correspond to a flag:
 
 ```javascript
 import Flag from 'react-world-flags'
