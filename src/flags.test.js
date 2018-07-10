@@ -11,4 +11,10 @@ describe('flags', () => {
   it('exports the EU flag', () => {
     expect(flags.flag_EU).toBeDefined()
   })
+  it('exports the Netherlands Antilles flag', () => {
+    expect(flags.flag_AN).toBeDefined()
+  })
+  it('exports the English flag', () => {
+    expect(flags.flag_GB_ENG).toBeDefined()
+  })
 })

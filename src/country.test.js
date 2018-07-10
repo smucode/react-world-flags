@@ -29,4 +29,8 @@ describe('getAlphaTwoCode', () => {
     const code = getAlphaTwoCode('004')
     expect(code).toBe('AF')
   })
+  it('supports non country codes', () => {
+    const code = getAlphaTwoCode('GB-ENG')
+    expect(code).toBe('GB-ENG')
+  })
 })

@@ -1,6 +1,6 @@
 {
   "name": "react-world-flags",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "SVG flags of the world for react",
   "main": "dist/react-world-flags.js",
   "jest": {
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/smucode/react-world-flags#readme",
   "dependencies": {
-    "svg-country-flags": "^1.2.3",
+    "svg-country-flags":
+      "git@github.com:hjnilsson/country-flags.git#43451d226fcd9946d9db78aed470a18a81b4d2c6",
     "world-countries": "^2.0.0"
   },
   "peerDependencies": {

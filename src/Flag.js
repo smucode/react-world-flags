@@ -6,6 +6,6 @@ export default props => {
   // eslint-disable-next-line fp/no-nil
   const { code, fallback = null, ...rest } = props
   const alphaTwo = getAlphaTwoCode(code)
-  const flag = flags['flag_' + alphaTwo]
+  const flag = flags['flag_' + alphaTwo.replace('-', '_')]
   return flag ? <img {...rest} src={flag} /> : fallback
 }

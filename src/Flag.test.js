@@ -4,6 +4,7 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
+import countries from 'svg-country-flags/countries.json'
 
 import Flag from './Flag'
 
@@ -24,4 +25,11 @@ it('renders a fallback flag correctly', () => {
 it('renders nothing if code does not exist', () => {
   const flag = renderer.create(<Flag code="xxx" height="42" />).toJSON()
   expect(flag).toMatchSnapshot()
+})
+
+Object.keys(countries).map(c => {
+  it('exports the ' + c + ' flag', () => {
+    const flag = renderer.create(<Flag code={c} />).toJSON()
+    expect(flag).toMatchSnapshot()
+  })
 })
