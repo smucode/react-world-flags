@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/smucode/react-world-flags#readme",
   "dependencies": {
-    "svg-country-flags":
-      "git@github.com:hjnilsson/country-flags.git#43451d226fcd9946d9db78aed470a18a81b4d2c6",
+    "svg-country-flags": "^1.2.3",
     "world-countries": "^2.0.0"
   },
   "peerDependencies": {
