@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/smucode/react-world-flags.svg?style=svg)](https://circleci.com/gh/smucode/react-world-flags)
+
+
 # react-world-flags
 
 Easy to use SVG flags of the world for react
