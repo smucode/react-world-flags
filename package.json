@@ -51,7 +51,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
-    "svg-url-loader": "^2.3.2",
+    "svg-url-loader": "^3.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   },
