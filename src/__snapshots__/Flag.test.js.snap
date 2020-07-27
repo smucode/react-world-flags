@@ -1536,7 +1536,13 @@ exports[`exports the ZW flag 1`] = `
 />
 `;
 
-exports[`renders a fallback flag correctly 1`] = `
+exports[`renders a fallback flag correctly if code is empty 1`] = `
+<span>
+  Does not exist.
+</span>
+`;
+
+exports[`renders a fallback flag correctly if flag is erroneous 1`] = `
 <span>
   Does not exist.
 </span>

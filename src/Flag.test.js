@@ -13,10 +13,19 @@ it('renders the norwegian flag correctly', () => {
   expect(flag).toMatchSnapshot()
 })
 
-it('renders a fallback flag correctly', () => {
+it('renders a fallback flag correctly if flag is erroneous', () => {
   const flag = renderer
     .create(
       <Flag code="xxx" height="42" fallback={<span>Does not exist.</span>} />
+    )
+    .toJSON()
+  expect(flag).toMatchSnapshot()
+})
+
+it('renders a fallback flag correctly if code is empty', () => {
+  const flag = renderer
+    .create(
+      <Flag code="" height="42" fallback={<span>Does not exist.</span>} />
     )
     .toJSON()
   expect(flag).toMatchSnapshot()
@@ -27,7 +36,7 @@ it('renders nothing if code does not exist', () => {
   expect(flag).toMatchSnapshot()
 })
 
-Object.keys(countries).map(c => {
+Object.keys(countries).map((c) => {
   it('exports the ' + c + ' flag', () => {
     const flag = renderer.create(<Flag code={c} />).toJSON()
     expect(flag).toMatchSnapshot()
