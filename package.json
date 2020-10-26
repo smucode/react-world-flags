@@ -48,9 +48,9 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.6",
     "jest": "^26.4.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-test-renderer": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-test-renderer": "^17.0.1",
     "svg-url-loader": "^6.0.0",
     "webpack": "^5.2.0",
     "webpack-cli": "^4.1.0"
