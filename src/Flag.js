@@ -1,11 +1,13 @@
+/* eslint-disable fp/no-nil */
+/* eslint-disable fp/no-rest-parameters */
+/* eslint-disable better/no-ifs */
+
 import React from 'react'
 import flags from './flags'
 import { getAlphaTwoCode } from './country'
 
 export default (props) => {
-  // eslint-disable-next-line fp/no-nil
   const { code, fallback = null, ...rest } = props
-  // eslint-disable-next-line better/no-ifs
   if (!code) return fallback
   const alphaTwo = getAlphaTwoCode(code)
   const flag = flags['flag_' + alphaTwo.replace('-', '_')]
