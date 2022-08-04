@@ -1,6 +1,6 @@
 {
   "name": "react-world-flags",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "SVG flags of the world for react",
   "main": "dist/react-world-flags.js",
   "jest": {
@@ -37,17 +37,10 @@
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
-    "@babel/eslint-parser": "^7.17.0",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.5",
-    "eslint": "^8.15.0",
-    "eslint-config-cleanjs": "^4.0.0",
-    "eslint-plugin-better": "^0.1.5",
-    "eslint-plugin-fp": "^2.3.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.29.4",
     "jest": "^28.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -59,10 +52,10 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "lint": "eslint src/",
     "gen": "babel-node scripts/genFlagExports.js",
     "build-demo": "webpack --config docs/webpack.config.js",
-    "pre-publish": "npm run compress && npm run gen && npm run lint && npm run test && npm run build && npm run build-demo",
-    "compress": "npx svgo --multipass -f node_modules/svg-country-flags/svg/ ./src/svgs && (cd ./src/svgs && sed -i -e \"s/-inkscape-font-specification:'Narkisim, Normal'//g\" *)"
+    "pre-publish": "npm run compress && npm run gen && npm run test && npm run build && npm run build-demo",
+    "compress": "rm -f ./src/svgs/* && npx svgo --multipass -f node_modules/svg-country-flags/svg/ ./src/svgs && (cd ./src/svgs && sed -i -e \"s/-inkscape-font-specification:'Narkisim, Normal'//g\" *) && cp node_modules/svg-country-flags/svg/si.svg ./src/svgs",
+    "nocompress": "cp node_modules/svg-country-flags/svg/*.svg ./src/svgs"
   }
 }
