@@ -22,9 +22,6 @@ jobs:
           name: gen
           command: npm run gen
       - run:
-          name: lint
-          command: npm run lint
-      - run:
           name: test
           command: npm test
       - run:
