@@ -1,0 +1,4 @@
+const t = "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%22-2%20-3%2012%206%22%3E%3Cpath%20fill%3D%22%23ce1126%22%20d%3D%22M-2-3h4v6h-4z%22%2F%3E%3Cpath%20fill%3D%22%23fcd116%22%20d%3D%22M2-3h8v3H2z%22%2F%3E%3Cpath%20fill%3D%22%23009e49%22%20d%3D%22M2%200h8v3H2z%22%2F%3E%3Cg%20id%3D%22b%22%3E%3Cpath%20id%3D%22a%22%20fill%3D%22%23000%22%20d%3D%22M0-1v1h.5%22%20transform%3D%22rotate(18%200%20-1)%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20transform%3D%22scale(-1%201)%22%2F%3E%3C%2Fg%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%20transform%3D%22rotate(72)%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%20transform%3D%22rotate(144)%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%20transform%3D%22rotate(216)%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%20transform%3D%22rotate(288)%22%2F%3E%3C%2Fsvg%3E";
+export {
+  t as default
+};

@@ -1,0 +1,4 @@
+const f = "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%3E%3Cpath%20fill%3D%22%23002a8f%22%20d%3D%22M0%200h800v400H0z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%2080h800v80H0v80h800v80H0z%22%2F%3E%3Cpath%20fill%3D%22%23cf142b%22%20d%3D%22M346.4%20200%200%200v400z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22m115.5%20140%2035.35%20108.5-92.5-67h114.2l-92.5%2067z%22%2F%3E%3C%2Fsvg%3E";
+export {
+  f as default
+};
