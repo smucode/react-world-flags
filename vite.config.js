@@ -24,18 +24,14 @@ function svgDataUrlPlugin() {
   }
 }
 
-// Plugin to preserve 'use client' directive in build output
-function preserveUseClientPlugin() {
+function preserveUseClientForFlag() {
   return {
-    name: 'preserve-use-client',
-    generateBundle(options, bundle) {
-      // Add 'use client' directive to the main entry file
-      const entryFile = Object.keys(bundle).find(
-        (fileName) => fileName === 'react-world-flags.js'
-      )
-      if (entryFile && bundle[entryFile].type === 'chunk') {
-        bundle[entryFile].code = "'use client'\n" + bundle[entryFile].code
+    name: 'preserve-use-client-flag',
+    renderChunk(code, chunk) {
+      if (chunk.facadeModuleId && chunk.facadeModuleId.endsWith('Flag.tsx')) {
+        return `'use client';\n${code}`
       }
+      return null
     },
   }
 }
@@ -46,14 +42,14 @@ export default defineConfig(({ command }) => {
   return {
     plugins: [
       ...(isTest ? [] : [svgDataUrlPlugin()]),
-      ...(isTest ? [] : [preserveUseClientPlugin()]),
+      ...(isTest ? [] : [preserveUseClientForFlag()]),
       ...(isTest ? [] : [dts({ rollupTypes: true })]),
     ],
     build: {
       lib: {
         entry: resolve(__dirname, 'src/main.ts'),
         formats: ['es'],
-        fileName: () => 'react-world-flags.js',
+        // fileName: () => 'react-world-flags.js',
       },
       rollupOptions: {
         external: ['react', 'react-dom', 'react/jsx-runtime'],
@@ -62,6 +58,12 @@ export default defineConfig(({ command }) => {
           chunkFileNames: 'flags/[name]-[hash].js',
           assetFileNames: 'assets/[name]-[hash][extname]',
         },
+        input: {
+          main: 'src/main.ts',
+          Flag: 'src/Flag.tsx',
+          country: 'src/country.ts',
+        },
+        preserveModules: true,
       },
       outDir: 'dist',
     },
