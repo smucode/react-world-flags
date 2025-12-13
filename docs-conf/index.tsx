@@ -1,7 +1,7 @@
 import { useState, ChangeEvent } from 'react'
 import { createRoot } from 'react-dom/client'
 import Flag from '../src/Flag'
-import { getAlphaTwoCode } from '../src/country'
+import { getAlphaTwoCode, countries, getCountryByAlpha2 } from '../src/country'
 
 // Read country.ts to extract all alpha-2 codes from lookup tables
 // Try to read the file as raw text
@@ -167,24 +167,65 @@ interface FlagsProps {
 const Flags = ({ query }: FlagsProps) => {
   const [height, setHeight] = useState(50)
 
+  // Create a map of all codes (including special codes) to country info
+  const codeToCountry = new Map<
+    string,
+    {
+      name?: string
+      codes: { alpha2: string; alpha3?: string; numeric?: string }
+    }
+  >()
+
+  // Add countries from the countries array
+  countries.forEach((country) => {
+    codeToCountry.set(country.alpha2.toLowerCase(), {
+      name: country.name,
+      codes: {
+        alpha2: country.alpha2,
+        alpha3: country.alpha3,
+        numeric: country.numeric,
+      },
+    })
+  })
+
+  // Add special codes that might not be in the countries array
+  countryCodes.forEach((code) => {
+    if (!codeToCountry.has(code)) {
+      const codes = getAllCodes(code)
+      codeToCountry.set(code, {
+        codes: {
+          alpha2: codes.alpha2,
+          alpha3: codes.alpha3,
+          numeric: codes.numeric,
+        },
+      })
+    }
+  })
+
   const flags = countryCodes
     .filter((code) => {
       if (!query) return true
       const queryLower = query.toLowerCase()
-      const codes = getAllCodes(code)
-      // Search in all code types
+      const countryInfo = codeToCountry.get(code)
+      const codes = countryInfo?.codes || getAllCodes(code)
+
+      // Search in all code types and country name
       return (
         codes.alpha2.includes(queryLower) ||
         codes.alpha3?.toLowerCase().includes(queryLower) ||
-        codes.numeric?.includes(queryLower)
+        codes.numeric?.includes(queryLower) ||
+        countryInfo?.name?.toLowerCase().includes(queryLower)
       )
     })
     .map((code) => {
-      const codes = getAllCodes(code)
+      const countryInfo = codeToCountry.get(code)
+      const codes = countryInfo?.codes || getAllCodes(code)
       const codeString = [codes.alpha2, codes.alpha3, codes.numeric]
         .filter(Boolean)
         .join('/')
-      const title = codeString
+      const title = countryInfo?.name || codeString
+      // Flag width is approximately 4:3 aspect ratio (height * 4/3)
+      const flagWidth = (height * 4) / 3
       return (
         <div
           key={code}
@@ -197,8 +238,18 @@ const Flags = ({ query }: FlagsProps) => {
             style={{ boxShadow: '2px 2px 7px #ccc', display: 'block' }}
             height={height}
           />
-          <div style={{ fontSize: '12px', marginTop: '4px', color: '#666' }}>
-            {codeString}
+          <div
+            style={{
+              fontSize: '12px',
+              marginTop: '4px',
+              color: '#666',
+              width: flagWidth,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {countryInfo?.name || codeString}
           </div>
         </div>
       )
@@ -234,7 +285,7 @@ const Search = ({ onChange, query }: SearchProps) => (
     <input
       type="text"
       value={query}
-      placeholder="Filter by country code (alpha-2, alpha-3, or numeric)"
+      placeholder="Filter by country name or code (alpha-2, alpha-3, or numeric)"
       onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
       style={{ width: '300px', padding: '2px', fontSize: '16px' }}
     />

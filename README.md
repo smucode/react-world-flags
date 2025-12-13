@@ -1,6 +1,5 @@
 [![CircleCI](https://circleci.com/gh/smucode/react-world-flags.svg?style=svg)](https://circleci.com/gh/smucode/react-world-flags)
 
-
 # react-world-flags
 
 Easy to use SVG flags of the world for react
@@ -17,8 +16,10 @@ npm install react-world-flags
 
 ```javascript
 import Flag from 'react-world-flags'
+```
 
-<Flag code={ code } />
+```javascript
+<Flag code={code} height="20" />
 ```
 
 Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), [three letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or [three digit](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) country code.
@@ -27,20 +28,24 @@ You can also pass an optional `fallback` which renders if the given code doesn't
 
 ```javascript
 import Flag from 'react-world-flags'
+```
 
-<Flag code="foo" fallback={ <span>Unknown</span> }/>
+```javascript
+<Flag code="foo" fallback={<span>Unknown</span>} />
 ```
 
 All props but `code` and `fallback` are passed through to the rendered `img`
 
 ```javascript
-<Flag code="nor" height="16" />
+<Flag code="nor" foo="bar" />
 
-// <img src="data:image/svg+xml..." height="16">
+// <img ... foo="bar">
 ```
 
-## Caveat
+## ~~Caveat~~
 
-The bundle contains all flags of the world and is about 1.3 MB gzipped.
+~~The bundle contains all flags of the world and is about 1.3 MB gzipped.~~
 
-SVG's are inlined using [Data_URIs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+~~SVG's are inlined using [Data_URIs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).~~
+
+2.0 dynamically loads SVGs so the bundle size is no longer an issue.
