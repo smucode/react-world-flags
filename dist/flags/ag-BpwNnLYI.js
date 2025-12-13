@@ -1,4 +1,0 @@
-const t = "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%20138%2092%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h138v92H0z%22%2F%3E%3Cpath%20d%3D%22M0%200h138v46H0z%22%2F%3E%3Cg%20transform%3D%22translate(69%2036)%22%3E%3Cg%20id%3D%22b%22%3E%3Cpath%20id%3D%22a%22%20fill%3D%22%23fcd116%22%20d%3D%22M-30%200%200-5.742V5.742z%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20transform%3D%22rotate(22.5)%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20transform%3D%22rotate(45)%22%2F%3E%3C%2Fg%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%20transform%3D%22rotate(67.5)%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23b%22%20transform%3D%22rotate(135)%22%2F%3E%3C%2Fg%3E%3Cpath%20fill%3D%22%230072c6%22%20d%3D%22M0%2036h138v20H0z%22%2F%3E%3Cpath%20fill%3D%22%23ce1126%22%20d%3D%22M0%200v92h138V0L69%2092z%22%2F%3E%3C%2Fsvg%3E";
-export {
-  t as default
-};

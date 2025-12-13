@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300"><path d="M0 752.362h200v300H0z" style="fill:#169b62;fill-opacity:1;stroke:none" transform="translate(0 -752.362)"/><path d="M200 752.362h200v300H200z" style="fill:#fff;fill-opacity:1;stroke:none" transform="translate(0 -752.362)"/><path d="M400 752.362h200v300H400z" style="fill:#ff883e;fill-opacity:1;stroke:none" transform="translate(0 -752.362)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ie" viewBox="0 0 640 480">
+  <g fill-rule="evenodd" stroke-width="1pt">
+    <path fill="#fff" d="M0 0h640v480H0z"/>
+    <path fill="#009A49" d="M0 0h213.3v480H0z"/>
+    <path fill="#FF7900" d="M426.7 0H640v480H426.7z"/>
+  </g>
+</svg>

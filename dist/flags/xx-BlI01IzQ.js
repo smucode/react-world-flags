@@ -1,0 +1,4 @@
+const t = "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22flag-icons-xx%22%20viewBox%3D%220%200%20640%20480%22%3E%0A%20%20%3Cpath%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20stroke%3D%22%23adb5bd%22%20stroke-width%3D%221.1%22%20d%3D%22M.5.5h638.9v478.9H.5z%22%2F%3E%0A%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23adb5bd%22%20stroke-width%3D%221.1%22%20d%3D%22m.5.5%20639%20479m0-479-639%20479%22%2F%3E%0A%3C%2Fsvg%3E%0A";
+export {
+  t as default
+};

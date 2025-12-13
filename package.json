@@ -40,9 +40,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^16.3.0",
-    "svg-country-flags": "^1.2.10",
-    "svgo": "^4.0.0",
-    "world-countries": "^5.0.0",
     "@types/node": "^25.0.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
@@ -53,18 +50,20 @@
     "typescript": "^5.9.3",
     "vite": "^7.2.7",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^4.0.15"
+    "vitest": "^4.0.15",
+    "world-countries": "^5.0.0",
+    "flag-icons": "^7.5.0"
   },
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "build": "vite build",
-    "build-demo": "vite build --config docs/vite.config.js",
+    "build-demo": "rm -rf docs && vite build --config docs-conf/vite.config.js",
     "gen:countries": "node scripts/genCountryLookup.js",
-    "pre-publish": "npm run compress && npm run gen:countries && npm run test && npm run build && npm run build-demo",
-    "compress": "rm -f ./src/svgs/* && npx svgo --multipass -f node_modules/svg-country-flags/svg/ ./src/svgs && (cd ./src/svgs && sed -i -e \"s/-inkscape-font-specification:'Narkisim, Normal'//g\" *) && cp node_modules/svg-country-flags/svg/si.svg ./src/svgs",
-    "nocompress": "cp node_modules/svg-country-flags/svg/*.svg ./src/svgs"
+    "copy:flags": "rm -rf ./src/svgs/*.svg && cp node_modules/flag-icons/flags/4x3/*.svg ./src/svgs/",
+    "pre-publish": "npm run copy:flags && npm run gen:countries && npm run test && npm run build && npm run build-demo",
+    "serve:docs": "(cd docs && python3 -m http.server 8000)"
   },
   "sideEffects": false,
   "type": "module"
