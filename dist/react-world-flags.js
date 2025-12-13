@@ -1,3 +1,4 @@
+'use client'
 import { jsx as C } from "react/jsx-runtime";
 import { useState as R, useEffect as B } from "react";
 const S = {

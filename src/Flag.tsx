@@ -1,7 +1,15 @@
-import { useState, useEffect, type ReactNode, type ImgHTMLAttributes } from 'react'
+'use client'
+
+import {
+  useState,
+  useEffect,
+  type ReactNode,
+  type ImgHTMLAttributes,
+} from 'react'
 import { getAlphaTwoCode } from './country'
 
-export interface FlagProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 'src'> {
+export interface FlagProps
+  extends Omit<ImgHTMLAttributes<HTMLImageElement>, 'src'> {
   code: string
   fallback?: ReactNode
 }

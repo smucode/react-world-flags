@@ -24,12 +24,29 @@ function svgDataUrlPlugin() {
   }
 }
 
+// Plugin to preserve 'use client' directive in build output
+function preserveUseClientPlugin() {
+  return {
+    name: 'preserve-use-client',
+    generateBundle(options, bundle) {
+      // Add 'use client' directive to the main entry file
+      const entryFile = Object.keys(bundle).find(
+        (fileName) => fileName === 'react-world-flags.js'
+      )
+      if (entryFile && bundle[entryFile].type === 'chunk') {
+        bundle[entryFile].code = "'use client'\n" + bundle[entryFile].code
+      }
+    },
+  }
+}
+
 export default defineConfig(({ command }) => {
   const isTest = command === 'test'
 
   return {
     plugins: [
       ...(isTest ? [] : [svgDataUrlPlugin()]),
+      ...(isTest ? [] : [preserveUseClientPlugin()]),
       ...(isTest ? [] : [dts({ rollupTypes: true })]),
     ],
     build: {
