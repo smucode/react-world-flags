@@ -1,7 +1,8 @@
 [![CircleCI](https://circleci.com/gh/smucode/react-world-flags.svg?style=svg)](https://circleci.com/gh/smucode/react-world-flags)
 
-
 # react-world-flags
+
+Please check out [v2 beta](https://github.com/smucode/react-world-flags/tree/v2).
 
 Easy to use SVG flags of the world for react
 
@@ -18,7 +19,7 @@ npm install react-world-flags
 ```javascript
 import Flag from 'react-world-flags'
 
-<Flag code={ code } />
+;<Flag code={code} />
 ```
 
 Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), [three letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or [three digit](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) country code.
@@ -28,7 +29,7 @@ You can also pass an optional `fallback` which renders if the given code doesn't
 ```javascript
 import Flag from 'react-world-flags'
 
-<Flag code="foo" fallback={ <span>Unknown</span> }/>
+;<Flag code="foo" fallback={<span>Unknown</span>} />
 ```
 
 All props but `code` and `fallback` are passed through to the rendered `img`
