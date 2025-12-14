@@ -14,7 +14,7 @@ Easy to use SVG flags of the world for react
 ## Installation
 
 ```
-npm install react-world-flags
+npm install react-world-flags@2.0.0-beta.4
 ```
 
 ## Usage
