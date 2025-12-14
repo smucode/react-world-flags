@@ -1,10 +1,15 @@
-[![CircleCI](https://circleci.com/gh/smucode/react-world-flags.svg?style=svg)](https://circleci.com/gh/smucode/react-world-flags)
-
-# react-world-flags
+# react-world-flags 2 beta
 
 Easy to use SVG flags of the world for react
 
 [Demo](https://smucode.github.io/react-world-flags/)
+
+## Changes from V1
+
+- Dynamically load SVGs to avoid huge bundle size
+- Use more up to date lib for SVGs, but now flags are 4:3 aspect ratio
+- Requires react 18+
+- Rewritten to use TS and Vite
 
 ## Installation
 
@@ -41,11 +46,3 @@ All props but `code` and `fallback` are passed through to the rendered `img`
 
 // <img ... foo="bar">
 ```
-
-## ~~Caveat~~
-
-~~The bundle contains all flags of the world and is about 1.3 MB gzipped.~~
-
-~~SVG's are inlined using [Data_URIs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).~~
-
-2.0 dynamically loads SVGs so the bundle size is no longer an issue.
