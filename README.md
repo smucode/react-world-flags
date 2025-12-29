@@ -27,9 +27,8 @@ Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-
 You can also pass an optional `fallback` which renders if the given code doesn't correspond to a flag:
 
 ```javascript
-import Flag from 'react-world-flags'
-
-;<Flag code="foo" fallback={<span>Unknown</span>} />
+import Flag from 'react-world-flags';
+<Flag code="foo" fallback={<span>Unknown</span>} />
 ```
 
 All props but `code` and `fallback` are passed through to the rendered `img`
