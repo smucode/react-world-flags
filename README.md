@@ -19,7 +19,7 @@ npm install react-world-flags
 ```javascript
 import Flag from 'react-world-flags'
 
-;<Flag code={code} />
+<Flag code={code} />
 ```
 
 Where `code` is the [two letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), [three letter](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or [three digit](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) country code.
